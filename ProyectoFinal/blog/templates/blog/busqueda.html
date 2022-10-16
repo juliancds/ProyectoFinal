@@ -1,0 +1,9 @@
+{% extends "blog/padre.html" %}
+{% load static %}
+{% block contenidoDelTemplate %}
+<h2>Buscar articulos en la base de datos por fecha</h2>
+<form action="/blog/searching" method="GET">
+    <p><input type="date" name="fecha" id="fecha"></p>
+    <input type="submit" value="Buscar en la BD">
+</form>
+{% endblock %}

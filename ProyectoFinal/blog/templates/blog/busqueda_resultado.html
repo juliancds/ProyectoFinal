@@ -1,0 +1,17 @@
+{% extends "blog/padre.html" %}
+{% load static %}
+{% block contenidoDelTemplate %}
+<h3>Estamos buscando el articulo con la fecha: {{ fecha }}</h3>
+
+{% if articulos_encontrados %}
+
+<h2>Felicitaciones se encontraron los siguientes articulos con la fecha que ingresaste!</h2>
+
+<h2><ul>
+{% for articulo in articulos_encontrados %}
+    <li>{{articulo.titulo}} {{articulo.texto}}</li>
+{% endfor %}
+</ul></h2>
+
+{% endif %}
+{% endblock %}

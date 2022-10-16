@@ -50,3 +50,20 @@ def template_seccion(request):
     seccion = Seccion(nombre=request.POST["nombre"])
     seccion.save()
     return render(request, "blog/inicio.html")
+
+
+def template_search(request):
+    return render(request, "blog/busqueda.html")
+
+
+def template_searching(request):
+
+    if not request.GET["fecha"]:
+        return HttpResponse("<h1>No enviaste datos!</h1>")
+    else:
+        fecha_a_buscar = request.GET["fecha"]
+        fechas = Articulo.objects.filter(fecha=fecha_a_buscar)
+
+        contexto = {"fecha": fecha_a_buscar, "articulos_encontrados": fechas}
+
+        return render(request, "blog/busqueda_resultado.html", contexto)

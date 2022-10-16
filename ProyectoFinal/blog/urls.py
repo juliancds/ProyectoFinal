@@ -6,6 +6,8 @@ from blog.views import (
     template_autor,
     template_articulo,
     template_seccion,
+    template_search,
+    template_searching,
 )
 
 urlpatterns = [
@@ -15,4 +17,6 @@ urlpatterns = [
     path("autor/", template_autor, name="autor"),
     path("articulo/", template_articulo, name="articulo"),
     path("seccion/", template_seccion, name="seccion"),
+    path("search/", template_search, name="search"),
+    path("searching/", template_searching, name="searching"),
 ]

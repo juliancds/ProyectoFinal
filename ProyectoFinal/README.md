@@ -11,6 +11,7 @@
 5. [autor](http://localhost:8000/blog/autor/)
 6. [articulo](http://localhost:8000/blog/articulo/)
 7. [seccion](http://localhost:8000/blog/seccion/)
+8. [buscarArticuloPorFecha](http://localhost:8000/blog/search/)
 
 
 ### Funcionalidades
