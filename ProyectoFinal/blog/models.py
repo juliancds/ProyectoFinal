@@ -21,9 +21,15 @@ class Articulo(models.Model):
     texto = models.CharField(max_length=1000)
     fecha = models.DateField(null=True)
 
+    def __str__(self):
+        return f"{self.titulo} {self.fecha}"
+
 
 class Seccion(models.Model):
     class Meta:
         verbose_name_plural = "Secciones"
 
     nombre = models.CharField(max_length=30)
+
+    def __str__(self):
+        return f"{self.nombre}"
